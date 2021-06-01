@@ -22,9 +22,9 @@ router.post("/",async (req,res)=>{
   })
   try {
     const newTask = await task.save();
-    return res.status(201).send({message:"New product created",data:newTask});
+    return res.status(201).send({message:"New task created",data:newTask});
   }catch (err ){
-    return res.status(500).send({message:"Error in creating product"});
+    return res.status(500).send({message:"Error in creating task"});
   }
 });
 router.put("/:id", async (req,res)=>{
